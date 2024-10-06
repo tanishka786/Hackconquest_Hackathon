@@ -1,0 +1,416 @@
+/*
+body {
+    font-family: 'Roboto', sans-serif;
+    
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.container {
+    padding: 20px;
+}
+
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.container.dark-mode {
+    background-color: #1e1e1e;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.btn-secondary {
+    background-color: #0e4a8a;
+    color: white;
+}
+
+button.btn-secondary.dark-mode {
+    background-color: #575757;
+}
+
+button.btn-primary.dark-mode,
+button.btn-success.dark-mode,
+button.btn-danger.dark-mode,
+button.btn-warning.dark-mode {
+    color: #ffffff;
+}
+
+.result-container {
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.result-container.dark-mode {
+    background-color: #2e2e2e;
+    border-color: #444;
+}
+
+
+h1 {
+    font-size: 2.5em;
+    color: #0e4a8a;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.meeting-section {
+    background-color: rgb(64, 127, 140);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.speech-tool {
+    background-color:rgb(54, 97, 129);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tagline {
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #0e4a8a;
+    border-radius: 5px;
+    outline: none;
+    width: 200px;
+    font-size: 1em;
+    margin-left: 10px;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #0e4a8a;
+}
+
+button {
+    background-color: #0e4a8a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #999;
+}
+
+button:hover:enabled {
+    background-color: #0e4a8a;
+}
+
+.result-container {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    min-height: 40px;
+}
+
+.completeSpeech-divider {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-color: #0e4a8a;
+}
+
+.label {
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+#instructions {
+    font-weight: 600;
+    font-size: 1em;
+    color: #140950;
+}
+
+.ASL-letter {
+    width: 32px;
+    height: 32px;
+    margin: 2px;
+    display: inline-block;
+}
+#videos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.video-player{
+    background-color: black;
+    width: 100%;
+}
+
+#video-wrapper{
+    position: relative;
+}
+
+#waiting{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 240px;
+    height: 40px;
+
+}
+
+*/
+
+#answer{
+    
+}
+
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000; /* Set to black for better visibility in light mode */
+}
+
+/* Container styling */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Dark mode styles for body */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Dark mode styles for container */
+.container.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+/* Button styling */
+button {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #0e4a8a; /* Primary button color */
+    color: white;
+    transition: background-color 0.3s;
+}
+
+/* Disabled button styling */
+button:disabled {
+    background-color: #999;
+}
+
+/* Button hover effect */
+button:hover:enabled {
+    background-color: #0e4a8a;
+}
+
+/* Dark mode buttons */
+button.dark-mode {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+/* Secondary button styling */
+button.btn-secondary {
+    background-color: #0e4a8a;
+    color: white;
+}
+
+button.btn-secondary.dark-mode {
+    background-color: #575757;
+}
+
+button.btn-primary.dark-mode,
+button.btn-success.dark-mode,
+button.btn-danger.dark-mode,
+button.btn-warning.dark-mode {
+    color: #ffffff;
+}
+
+/* Meeting section styling */
+.meeting-section {
+    background-color: rgb(64, 127, 140);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Meeting section dark mode */
+.meeting-section.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+/* Speech tool (EchoAssist) styling */
+.speech-tool {
+    background-color: rgb(54, 97, 129);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Speech tool dark mode */
+.speech-tool.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+/* Result container styling */
+.result-container {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    min-height: 40px;
+    color: rgb(8, 16, 16);
+}
+
+/* Result container dark mode */
+.result-container.dark-mode {
+    background-color: #2e2e2e;
+    border-color: #444;
+}
+
+/* Headings and text styles */
+h1 {
+    font-size: 2.5em;
+    color: #0e4a8a;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 1.1em;
+    color: #white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Select dropdown styling */
+select {
+    padding: 10px;
+    border: 1px solid #0e4a8a;
+    border-radius: 5px;
+    outline: none;
+    width: 200px;
+    font-size: 1em;
+    margin-left: 10px;
+    transition: border-color 0.3s;
+}
+
+/* Focus state for select */
+select:focus {
+    border-color: #0e4a8a;
+}
+
+/* Dark mode select styling */
+select.dark-mode {
+    background-color: #2e2e2e;
+    color: #e0e0e0;
+}
+
+/* Divider styling */
+.completeSpeech-divider {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-color: #0e4a8a;
+}
+
+/* Label styling */
+.label {
+    font-weight: 500;
+    font-size: 1.1em;
+    color:rgb(54, 209, 209);
+}
+
+#instructions {
+    font-weight: 600;
+    font-size: 1em;
+    color: rgb(54, 209, 209);
+}
+
+/* ASL-letter styling */
+.ASL-letter {
+    width: 32px;
+    height: 32px;
+    margin: 2px;
+    display: inline-block;
+}
+
+/* Video section styling */
+#videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.video-player {
+    background-color: black;
+    width: 100%;
+}
+
+/* Video wrapper styling */
+#video-wrapper {
+    position: relative;
+}
+
+#waiting {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 240px;
+    height: 40px;
+}
+
+#answer {
+    /* Answer section */
+}

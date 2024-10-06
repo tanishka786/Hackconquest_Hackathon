@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Symbol - EchoAssist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #007bff;
+        }
+
+        .tagline {
+            font-size: 1.1em;
+            color: #555;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #lang-translation-input {
+            margin-bottom: 1rem;
+            font-size: 1em;
+        }
+
+        select {
+            padding: 10px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            outline: none;
+            width: 200px;
+            font-size: 1em;
+            margin-left: 10px;
+            transition: border-color 0.3s;
+        }
+
+        select:focus {
+            border-color: #0056b3;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:disabled {
+            background-color: #007bff;
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        button:not(:disabled):hover {
+            background-color: #0056b3;
+        }
+
+        .status {
+            font-style: italic;
+            font-size: 0.9em;
+            margin: 15px 0;
+        }
+
+        .label {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .result-container {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-container div {
+            padding: 8px;
+            border-radius: 5px;
+            background: #f9f9f9;
+            margin: 5px 0;
+            word-break: break-word;
+        }
+
+        .completeSpeech-divider {
+            width: 100%;
+            height: 1px;
+            background-color: #ddd;
+            margin: 20px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .completeSpeech {
+                display: none;
+            }
+
+            #resultTextTot,
+            #resultTextTransTot,
+            #resultSymbolTot {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>EchoAssist</h1>
+    <p class="tagline">Translation and Hand Signs - Translation Tool, so anybody can defeat the communication-barrier!</p>
+    <div id="lang-translation-input">
+        <label for="translatedLang">Choose translation language:</label>
+        <select name="translatedLang" id="translatedLang">
+            <option value="en" disabled selected hidden>Select</option>
+            <option value="as">Assamese</option>
+            <option value="bn">Bengali</option>
+            <option value="gu">Gujarati</option>
+            <option value="hi">Hindi</option>
+            <option value="kn">Kannada</option>
+            <option value="ml">Malayalam</option>
+            <option value="mr">Marathi</option>
+            <option value="ne">Nepali</option>
+            <option value="or">Odia/Oriya</option>
+            <option value="pa">Punjabi</option>
+            <option value="sa">Sanskrit</option>
+            <option value="te">Telugu</option>
+            <option value="ur">Urdu</option>
+        </select>
+    </div>
+    <button id="startRecording">Start Recording</button>
+    <button id="stopRecording" disabled>Stop Recording</button>
+    <p class="status">Status: <span id="instructions">Press the 'Start Recording' button and speak in English.</span></p>
+    <hr class="completeSpeech-divider">
+    <p class="label">Current Speech:</p>
+    <div class="result-container" id="resultText">&nbsp;</div>
+    <div class="result-container" id="resultTextTrans">&nbsp;</div>
+    <div class="result-container" id="resultSymbol">&nbsp;</div>
+    <hr class="completeSpeech-divider">
+    <p class="label completeSpeech">Complete Speech:</p>
+    <div class="result-container" id="resultTextTot">&nbsp;</div>
+    <div class="result-container" id="resultTextTransTot">&nbsp;</div>
+    <div class="result-container" id="resultSymbolTot">&nbsp;</div>
+    <script src="script.js"></script>
+</body>
+
+</html>
