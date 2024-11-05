@@ -56,10 +56,6 @@ The aim of Echo Assist is to create a real-time translation tool that bridges la
 3. Speak into the microphone, and Echo Assist will recognize, translate, and synthesize your words in real-time.
 4. The translated output will be played in the target language for the listener.
 
-
-## Acknowledgments
-Echo Assist was developed as part of the **HackConquest Hackathon**, held at **Thakur College of Engineering & Technology** during the **National Student Conference on Emerging Trends and Technology (NSC-ETT) - TECH-VISION 2024**.
-
 ## Contribution
 
    - As an open source project feel free to fork, modify, and contribute to it 😎 .
