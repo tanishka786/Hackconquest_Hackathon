@@ -402,4 +402,55 @@ if stop_button:
     progress_bar.empty()  # Clear progress bar if active
     source_caption_box.text_area("Source Language ", "", height=150)  # Clear the source language caption
     target_caption_box.text_area("Target Language ", "", height=150)  # Clear the target language caption
+"""
+# to run this go to cmd and write 
+# cd source
+# streamlit run main.py
+# if any error ocurs then install dependencies in cmd : 
+To install the dependencies you listed, you can use pip, the Python package manager. Here's how you can do it step by step:
 
+Steps:
+Create a Virtual Environment (Recommended): It's a good practice to use a virtual environment to isolate your project's dependencies.
+
+python -m venv myenv
+
+Activate the virtual environment:
+Windows: myenv\Scripts\activate
+Linux/Mac: source myenv/bin/activate
+
+Install the Dependencies: Run the following pip commands:
+
+pip install gtts pygame streamlit SpeechRecognition googletrans==3.1.0a0
+
+Create a requirements.txt File (Optional but Useful): If you're working on a project, you can list all dependencies in a requirements.txt file for easy installation later:
+
+makefile
+Copy code
+
+gtts
+pygame
+streamlit
+SpeechRecognition
+googletrans==3.1.0a0
+
+
+Install them in bulk:
+pip install -r requirements.txt
+Verify Installation: Test if the libraries are installed correctly by trying to import them in a Python script or REPL:
+
+python
+
+import gtts
+import pygame
+import streamlit
+import speech_recognition
+from googletrans import Translator
+
+Troubleshooting:
+If you encounter errors like "Command not found" or Permission denied, ensure pip is properly installed and you have the correct permissions.
+For googletrans==3.1.0a0, if installation fails, try upgrading pip first:
+
+pip install --upgrade pip
+Alternatively, use a compatible version of Python (preferably 3.6 to 3.10).
+
+"""
