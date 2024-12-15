@@ -405,7 +405,6 @@ if stop_button:
 
 """
  to run this go to cmd and write 
- cd source
  streamlit run main.py
  if any error ocurs then install dependencies in cmd : 
  To install the dependencies you listed, you can use pip, the Python package manager. Here's how you can do it step by step:
