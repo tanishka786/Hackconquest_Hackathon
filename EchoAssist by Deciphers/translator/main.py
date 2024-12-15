@@ -292,6 +292,7 @@ if stop_button:
 
 
     """
+
 import os
 import time
 import pygame # type: ignore
@@ -402,6 +403,8 @@ if stop_button:
     progress_bar.empty()  # Clear progress bar if active
     source_caption_box.text_area("Source Language ", "", height=150)  # Clear the source language caption
     target_caption_box.text_area("Target Language ", "", height=150)  # Clear the target language caption
+
+
 
 
 # Instructions to Run the Translator Application

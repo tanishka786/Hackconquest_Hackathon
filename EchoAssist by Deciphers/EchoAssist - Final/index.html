@@ -8,6 +8,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/logo.jpg">
+
+    <!-- just pratcie-->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 90vh; /* Adjust the height as needed */
+        }
+    </style>
+
+
+
 </head>
 
 <body>
@@ -22,9 +39,9 @@
             <div class="container">
                 <div class="row mb-3 mt-3 justify-content-md-center">
                     <div id="user-name"></div>
-                    <a href="https://thakur-g72gurvetcsnspmtfcnwve.streamlit.app/" target="_blank">
+                  <!-- <a href="https://thakur-g72gurvetcsnspmtfcnwve.streamlit.app/" target="_blank">
                         <button id="translation-tool" class="btn btn-secondary col-2">Translation Tool</button>
-                    </a>
+                    </a>-->  
                     <button id="call" class="btn btn-primary col-1">Call!</button>
                     <button id="hangup" class="btn btn-primary col-1">Hangup</button>
                     <button id="startScreenShare" class="btn btn-success col-1">Share Screen</button>
@@ -88,7 +105,18 @@
             <div class="result-container" id="resultTextTransTot">&nbsp;</div>
             <div class="result-container" id="resultSymbolTot">&nbsp;</div>
         </div>
+      
+
+        <!-- adding python translator-->
+        <h1>Real-Time Language Translator</h1>
+        <p>Experience the translator powered by Python.</p>
+        <iframe src="http://localhost:8501/"></iframe>
+        <p>If the application does not load, ensure the Python server is running.</p>
+
+
     </div>
+
+
 
     <!-- Scripts for functionality -->
     <script src="/socket.io/socket.io.js"></script>
