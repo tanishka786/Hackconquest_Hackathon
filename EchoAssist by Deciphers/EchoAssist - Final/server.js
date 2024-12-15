@@ -23,7 +23,9 @@ const io = socketio(expressServer,{
         methods: ["GET", "POST"]
     }
 });
-expressServer.listen(8181);
+expressServer.listen(8181, () => {
+    console.log('Server is running on https://localhost:8181');
+  });
 
 //offers will contain {}
 const offers = [
