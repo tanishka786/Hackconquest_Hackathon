@@ -403,8 +403,9 @@ if stop_button:
     source_caption_box.text_area("Source Language ", "", height=150)  # Clear the source language caption
     target_caption_box.text_area("Target Language ", "", height=150)  # Clear the target language caption
 
-"""
+'''
  to run this go to cmd and write 
+ cd translator
  streamlit run main.py
  if any error ocurs then install dependencies in cmd : 
  To install the dependencies you listed, you can use pip, the Python package manager. Here's how you can do it step by step:
@@ -453,4 +454,5 @@ For googletrans==3.1.0a0, if installation fails, try upgrading pip first:
 pip install --upgrade pip
 Alternatively, use a compatible version of Python (preferably 3.6 to 3.10).
 
-"""
+
+'''
